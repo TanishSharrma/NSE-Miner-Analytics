@@ -35,3 +35,4 @@ To Check for:
 4) Calculate Stop Loss by taking Significant Mean for the lowest a "Gaining" stock dips in a day.
 5) Correlation with the movement of NIFTY
 6) Effects on specific days (Mondays, Before major holidays, Before and After dividents are paid out etc)
+7) Test correlation between After Hour trend and daily trend
