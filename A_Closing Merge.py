@@ -31,11 +31,15 @@ for loop in range(start_row,last_row+1,group_size+1):
             y = "0\t0\t0\t0"
         else:
             y = ""
+            check = df.loc[df['A'] == str(key)]['B']
             x1 = df.loc[df['A'] == str(key)]['C']
             x2 = df.loc[df['A'] == str(key)]['D']
             x3 = df.loc[df['A'] == str(key)]['E']
             x4 = df.loc[df['A'] == str(key)]['F']
-            y = str(x1.iloc[0])+"\t"+str(x2.iloc[0])+"\t"+str(x3.iloc[0])+"\t"+str(x4.iloc[0])
+            if str(check.iloc[0]).find("EQ")!=-1:
+                y = str(x1.iloc[0]) + "\t" + str(x2.iloc[0]) + "\t" + str(x3.iloc[0]) + "\t" + str(x4.iloc[0])
+            else :
+                y = str(x1.iloc[1]) + "\t" + str(x2.iloc[1]) + "\t" + str(x3.iloc[1]) + "\t" + str(x4.iloc[1])
         filex.write(y+"\n")
     filex.write("\n")
 filex.close()
