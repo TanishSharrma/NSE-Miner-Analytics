@@ -5,11 +5,11 @@ import xlrd
 import os
 
 
-start_row = 4             # Set first value row (0,1,2....)  4 & 334
+start_row = 772             # Set first value row (0,1,2....)  4 & 334
 group_size = 5
-last_row = 447           # Second Latest Day's Available Data's last row 447
+last_row = 1485           # Second Latest Day's Available Data's last row 447
 sheet_name = 0            # 0 for Gainers and 1 for Losers
-year = "2019"
+year = "2017"
 path = "A_Experiment_"+year+".xlsx"
 
 data = pd.read_excel(path, sheet_name,None)
