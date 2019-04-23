@@ -2,11 +2,11 @@ import numpy
 import pandas as pd
 import os
 
-skip = 95
+skip = 91
 date = [[],[],[],[],[],[],[],[],[],[],[],[]]
 a = list(range(13))
 month = a[1:]
-year = 18
+year = 17
 file_name = []
 
 for root, dirs, files in os.walk("."):
@@ -42,7 +42,7 @@ for y in month:
         new = "\n" + str(y) + "/" + str(x) + "\t" + j.strip()
         filex.write(new)
 filex.close()
-'''
+
 #GAINERS
 filex = open("A_Gainers.txt","r+")
 for y in month:
@@ -89,4 +89,3 @@ for y in month:
         filex.write("\n")
     mct+=1
 filex.close()
-'''
